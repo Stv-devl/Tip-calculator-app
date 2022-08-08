@@ -1,0 +1,49 @@
+/**********************************************************************/
+/*Main*/
+/**********************************************************************/
+
+main {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  .card {
+    width: 920px;
+    height: 482px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    box-shadow: 0px 15px 10px 0px hsla(249, 10%, 26%, 0.1);
+    padding: 33px;
+
+    .grid01 {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 417px;
+
+      .container-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        li {
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+      .container-right {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
