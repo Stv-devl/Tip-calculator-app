@@ -28,21 +28,11 @@ main {
         @include center;
 
         input#bill {
-          background: $Verylightgrayishcyan;
-          color: $Verydarkcyan;
-          width: 100%;
-          height: 48px;
-          font-size: 1.3rem;
-          border-radius: 5px;
-          border: none;
-          text-align: right;
           padding-right: 20px;
           margin: 13px 0 45px 0;
-
-          &::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-          }
+          background-image: url(..//..//images/icon-dollar.svg);
+          background-repeat: no-repeat;
+          background-position: left 20px center;
         }
 
         ul {
@@ -63,50 +53,100 @@ main {
             border-radius: 5px;
 
             &:hover {
+              color: $Verydarkcyan;
               background: $Strongcyan;
             }
           }
+
+          .btnclicked {
+            color: $Verydarkcyan;
+            background: $Strongcyan;
+          }
+
           input#custom {
             @include center;
-            background-color: $Verylightgrayishcyan;
-            color: $Verydarkcyan;
-            width: 117px;
-            height: 48px;
-            font-size: 1.4rem;
-            border-radius: 5px;
-            border: none;
             text-align: center;
-
-            &::-webkit-inner-spin-button {
-              -webkit-appearance: none;
-              margin: 0;
-            }
           }
         }
         input#peoples {
-          background: $Verylightgrayishcyan;
+          padding-right: 20px;
+          margin-top: 10px;
+          background-image: url(..//..//images/icon-person.svg);
+          background-repeat: no-repeat;
+          background-position: left 20px center;
+        }
+      }
+      .container-right {
+        @include center;
+        flex-direction: column;
+        color: black;
+        padding: 40px;
+        background: $Verydarkcyan;
+        border-radius: 13px;
+
+        .flex1 {
+          display: flex;
+          align-items: center;
+          gap: 98px;
+          margin-bottom: 60px;
+
+          .amount {
+            display: flex;
+            flex-direction: column;
+
+            h4 {
+              color: $White;
+            }
+
+            p {
+              font-size: 0.9rem;
+              color: $Grayishcyan;
+            }
+          }
+          span#amountTip {
+            font-size: 2.5rem;
+            color: $Strongcyan;
+          }
+        }
+        .flex2 {
+          display: flex;
+          align-items: center;
+          gap: 125px;
+          margin-bottom: 104px;
+
+          .amountT {
+            display: flex;
+            flex-direction: column;
+
+            h5 {
+              color: $White;
+            }
+
+            p {
+              font-size: 0.9rem;
+              color: $Grayishcyan;
+            }
+          }
+          span#amountTotal {
+            font-size: 2.5rem;
+            color: $Strongcyan;
+          }
+        }
+        button#reset {
+          background-color: rgb(7, 127, 133);
           color: $Verydarkcyan;
           width: 100%;
           height: 48px;
           font-size: 1.3rem;
+          text-transform: uppercase;
           border-radius: 5px;
           border: none;
-          text-align: right;
-          padding-right: 20px;
-          margin-top: 10px;
+          cursor: pointer;
 
-          &::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
+          &:hover {
+            background: $Strongcyan;
           }
         }
-      }
-      .container-right {
-        color: black;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
       }
     }
   }

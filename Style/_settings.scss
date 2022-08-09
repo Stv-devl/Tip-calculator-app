@@ -36,9 +36,34 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
   font-size: 1rem;
 }
+
+input#bill,
+input#custom,
+input#peoples {
+  background-color: $Verylightgrayishcyan;
+  color: $Verydarkcyan;
+  width: 100%;
+  height: 48px;
+  font-size: 1.3rem;
+  text-align: right;
+  border-radius: 5px;
+  border: none;
+
+  &:focus {
+    border: 1.5px solid $Strongcyan;
+  }
+
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
 /*Mixin*/
 @mixin center {
   display: flex;

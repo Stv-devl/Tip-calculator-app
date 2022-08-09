@@ -3,6 +3,7 @@ const form = document.querySelector("form");
 const bills = document.getElementById("bill");
 const peoples = document.getElementById("peoples");
 const buttons = document.querySelectorAll(".button");
+
 let calcTip,
   calcPeople,
   number_people,
@@ -15,6 +16,12 @@ let calcTip,
 //tips buttons & calc
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
+    buttons.forEach((btn) => {
+      btn.classList.remove("btnclicked");
+    });
+    if (e.target.classList.contains("button")) {
+      e.target.classList.add("btnclicked");
+    }
     calcTip = e.target.id / 100;
     calcPeople = 1 + e.target.id / 100;
   });
@@ -23,14 +30,17 @@ buttons.forEach((btn) => {
 custom.addEventListener("change", (e) => {
   calcTipCustom = e.target.value / 100;
   calcPeopleCustom = 1 + e.target.value / 100;
+  custom.style.border = "1.5px solid hsl(172, 67%, 45%)";
 });
 //number of people
 peoples.addEventListener("change", (e) => {
   number_people = e.target.value;
+  peoples.style.border = "1.5px solid hsl(172, 67%, 45%)";
 });
 //bill price
 bills.addEventListener("change", (e) => {
   bill = e.target.value;
+  bills.style.border = "1.5px solid hsl(172, 67%, 45%)";
 });
 //if bill, tip btn, number selected => calc => display tip amount and Total to pay by person
 form.addEventListener("change", () => {
@@ -51,16 +61,13 @@ form.addEventListener("change", () => {
 
 //reset button
 reset.addEventListener("click", (e) => {
-  bill = 0;
-  number_people = 0;
-  calcTip = 0;
-  calcPeople = 0;
-  calcTipCustom = 0;
-  calcPeopleCustom = 0;
   bills.value = "";
   peoples.value = "";
   buttons.value = 0;
   custom.value = "";
   amountTip.textContent = "$0.00";
   amountTotal.textContent = "$0.00";
+  buttons.forEach((e) => {
+    e.classList.remove("btnclicked");
+  });
 });
