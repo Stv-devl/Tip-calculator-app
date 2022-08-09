@@ -3,15 +3,17 @@
 /**********************************************************************/
 
 /*setting fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-/*Weights: 400, 500, 600, 700*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+/*Weights: 700*/
 
 /*setting colors*/
-$red: hsl(0, 100%, 74%);
-$green: hsl(154, 59%, 51%);
-$blue: hsl(248, 32%, 49%);
-$darkBlue: hsl(249, 10%, 26%);
-$grayishBlue: hsl(246, 25%, 77%);
+$Strongcyan: hsl(172, 67%, 45%);
+$Verydarkcyan: hsl(183, 100%, 15%);
+$Darkgrayishcyan: hsl(186, 14%, 43%);
+$Grayishcyan: hsl(184, 14%, 56%);
+$Lightgrayishcyan: hsl(185, 41%, 84%);
+$Verylightgrayishcyan: hsl(180, 26%, 95%);
+$White: hsl(0, 0%, 100%);
 
 /*setting page*/
 * {
@@ -21,19 +23,31 @@ $grayishBlue: hsl(246, 25%, 77%);
   list-style-type: none;
   margin-block: 0;
   outline: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Space Mono", sans-serif;
 }
 
 /*setting body*/
 body {
-  font-size: 16px;
-  font-weight: 400;
-  background-color: rgb(214, 224, 214);
-  color: rgb(245, 245, 245);
+  font-size: 24px;
+  background-color: $Lightgrayishcyan;
   text-align: center;
+  color: $Grayishcyan;
 }
+
+h1,
+h2,
+h3 {
+  font-size: 1rem;
+}
+/*Mixin*/
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*setting link color (footer)*/
 a,
 a:visited {
-  color: blue;
+  color: rgb(7, 7, 227);
 }

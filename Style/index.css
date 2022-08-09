@@ -2,8 +2,8 @@
 /*setting*/
 /**********************************************************************/
 /*setting fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-/*Weights: 400, 500, 600, 700*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+/*Weights: 700*/
 /*setting colors*/
 /*setting page*/
 * {
@@ -13,59 +13,132 @@
   list-style-type: none;
   margin-block: 0;
   outline: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Space Mono", sans-serif;
 }
 
 /*setting body*/
 body {
-  font-size: 16px;
-  font-weight: 400;
-  background-color: rgb(214, 224, 214);
-  color: rgb(245, 245, 245);
+  font-size: 24px;
+  background-color: hsl(185deg, 41%, 84%);
   text-align: center;
+  color: hsl(184deg, 14%, 56%);
 }
 
+h1,
+h2,
+h3 {
+  font-size: 1rem;
+}
+
+/*Mixin*/
 /*setting link color (footer)*/
 a,
 a:visited {
-  color: blue;
+  color: rgb(7, 7, 227);
 }
 
 /**********************************************************************/
 /*Main*/
 /**********************************************************************/
 main {
-  color: black;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+}
+main img {
+  margin-bottom: 88px;
 }
 main .card {
   width: 920px;
   height: 482px;
   border-radius: 20px;
-  background-color: whitesmoke;
+  background-color: hsl(0deg, 0%, 100%);
   box-shadow: 0px 15px 10px 0px hsla(249deg, 10%, 26%, 0.1);
   padding: 33px;
+  text-align: left;
 }
 main .card .grid01 {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 417px;
+  grid-template-rows: 416px;
 }
 main .card .grid01 .container-left {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-main .card .grid01 .container-left li {
-  cursor: pointer;
+main .card .grid01 .container-left input#bill {
+  background: hsl(180deg, 26%, 95%);
+  color: hsl(183deg, 100%, 15%);
+  width: 100%;
+  height: 48px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: none;
+  text-align: right;
+  padding-right: 20px;
+  margin: 13px 0 45px 0;
 }
-main .card .grid01 .container-left li:hover {
-  transform: scale(1.05);
+main .card .grid01 .container-left input#bill::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .card .grid01 .container-left ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  -moz-column-gap: 14px;
+       column-gap: 14px;
+  row-gap: 16px;
+  margin: 20px 0 45px 0;
+}
+main .card .grid01 .container-left ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
+  width: 117px;
+  height: 48px;
+  border-radius: 5px;
+}
+main .card .grid01 .container-left ul li:hover {
+  background: hsl(172deg, 67%, 45%);
+}
+main .card .grid01 .container-left ul input#custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(180deg, 26%, 95%);
+  color: hsl(183deg, 100%, 15%);
+  width: 117px;
+  height: 48px;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+main .card .grid01 .container-left ul input#custom::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .card .grid01 .container-left input#peoples {
+  background: hsl(180deg, 26%, 95%);
+  color: hsl(183deg, 100%, 15%);
+  width: 100%;
+  height: 48px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: none;
+  text-align: right;
+  padding-right: 20px;
+  margin-top: 10px;
+}
+main .card .grid01 .container-left input#peoples::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 main .card .grid01 .container-right {
   color: black;

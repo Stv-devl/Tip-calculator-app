@@ -3,37 +3,101 @@
 /**********************************************************************/
 
 main {
-  color: black;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @include center;
   min-height: 100vh;
+
+  img {
+    margin-bottom: 88px;
+  }
 
   .card {
     width: 920px;
     height: 482px;
     border-radius: 20px;
-    background-color: whitesmoke;
+    background-color: $White;
     box-shadow: 0px 15px 10px 0px hsla(249, 10%, 26%, 0.1);
     padding: 33px;
+    text-align: left;
 
     .grid01 {
       display: grid;
       grid-template-columns: 50% 50%;
-      grid-template-rows: 417px;
+      grid-template-rows: 416px;
 
       .container-left {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include center;
 
-        li {
-          cursor: pointer;
+        input#bill {
+          background: $Verylightgrayishcyan;
+          color: $Verydarkcyan;
+          width: 100%;
+          height: 48px;
+          font-size: 1.3rem;
+          border-radius: 5px;
+          border: none;
+          text-align: right;
+          padding-right: 20px;
+          margin: 13px 0 45px 0;
 
-          &:hover {
-            transform: scale(1.05);
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+        }
+
+        ul {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          column-gap: 14px;
+          row-gap: 16px;
+          margin: 20px 0 45px 0;
+
+          li {
+            @include center;
+            cursor: pointer;
+            background: $Verydarkcyan;
+            color: $White;
+            width: 117px;
+            height: 48px;
+            border-radius: 5px;
+
+            &:hover {
+              background: $Strongcyan;
+            }
+          }
+          input#custom {
+            @include center;
+            background-color: $Verylightgrayishcyan;
+            color: $Verydarkcyan;
+            width: 117px;
+            height: 48px;
+            font-size: 1.4rem;
+            border-radius: 5px;
+            border: none;
+            text-align: center;
+
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          }
+        }
+        input#peoples {
+          background: $Verylightgrayishcyan;
+          color: $Verydarkcyan;
+          width: 100%;
+          height: 48px;
+          font-size: 1.3rem;
+          border-radius: 5px;
+          border: none;
+          text-align: right;
+          padding-right: 20px;
+          margin-top: 10px;
+
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
           }
         }
       }
