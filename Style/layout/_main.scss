@@ -68,6 +68,12 @@ main {
             text-align: center;
           }
         }
+
+        span#choosenumber {
+          font-size: 0.9rem;
+          margin-left: 80px;
+          color: rgb(209, 14, 14);
+        }
         input#peoples {
           padding-right: 20px;
           margin-top: 10px;

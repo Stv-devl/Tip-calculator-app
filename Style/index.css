@@ -135,6 +135,11 @@ main .card .grid01 .container-left ul input#custom {
   justify-content: center;
   text-align: center;
 }
+main .card .grid01 .container-left span#choosenumber {
+  font-size: 0.9rem;
+  margin-left: 80px;
+  color: rgb(209, 14, 14);
+}
 main .card .grid01 .container-left input#peoples {
   padding-right: 20px;
   margin-top: 10px;
