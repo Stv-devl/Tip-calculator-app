@@ -2,14 +2,22 @@
 /*Main*/
 /**********************************************************************/
 
+/*center element in page*/
 main {
   @include center;
   min-height: 100vh;
 
   img {
     margin-bottom: 88px;
-  }
 
+    /************************************/
+    /*Media*/
+    /***********************************/
+    @media screen and (max-width: 940px) {
+      margin-bottom: 40px;
+    }
+  }
+  /*Setting card*/
   .card {
     width: 920px;
     height: 482px;
@@ -19,13 +27,40 @@ main {
     padding: 33px;
     text-align: left;
 
+    /************************************/
+    /*Media*/
+    /***********************************/
+    @media screen and (max-width: 940px) {
+      width: 460px;
+      height: 790px;
+    }
+    @media screen and (max-width: 480px) {
+      width: 360px;
+      height: 790px;
+    }
+    /*2 columns*/
     .grid01 {
       display: grid;
       grid-template-columns: 50% 50%;
-      grid-template-rows: 416px;
+      grid-template-rows: 100%;
+
+      /************************************/
+      /*Media*/
+      /***********************************/
+      @media screen and (max-width: 940px) {
+        display: block;
+      }
 
       .container-left {
-        @include center;
+        padding-left: 10px;
+        padding-right: 40px;
+
+        /************************************/
+        /*Media*/
+        /***********************************/
+        @media screen and (max-width: 940px) {
+          padding: 0;
+        }
 
         input#bill {
           padding-right: 20px;
@@ -33,8 +68,15 @@ main {
           background-image: url(..//..//images/icon-dollar.svg);
           background-repeat: no-repeat;
           background-position: left 20px center;
-        }
 
+          /************************************/
+          /*Media*/
+          /***********************************/
+          @media screen and (max-width: 940px) {
+            margin: 13px 0 30px 0;
+          }
+        }
+        /*tip buttons*/
         ul {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
@@ -42,6 +84,16 @@ main {
           column-gap: 14px;
           row-gap: 16px;
           margin: 20px 0 45px 0;
+          /************************************/
+          /*Media*/
+          /***********************************/
+          @media screen and (max-width: 940px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            column-gap: 14px;
+            row-gap: 16px;
+            margin: 16px 0 30px 0;
+          }
 
           li {
             @include center;
@@ -56,8 +108,14 @@ main {
               color: $Verydarkcyan;
               background: $Strongcyan;
             }
+            /************************************/
+            /*Media*/
+            /***********************************/
+            @media screen and (max-width: 940px) {
+              width: 100%;
+            }
           }
-
+          /*to interact with javascript*/
           .btnclicked {
             color: $Verydarkcyan;
             background: $Strongcyan;
@@ -66,6 +124,14 @@ main {
           input#custom {
             @include center;
             text-align: center;
+            width: 117px;
+            height: 48px;
+            /************************************/
+            /*Media*/
+            /***********************************/
+            @media screen and (max-width: 940px) {
+              width: 100%;
+            }
           }
         }
 
@@ -73,6 +139,17 @@ main {
           font-size: 0.9rem;
           margin-left: 80px;
           color: rgb(209, 14, 14);
+
+          /************************************/
+          /*Media*/
+          /***********************************/
+          @media screen and (max-width: 940px) {
+            margin-left: 20px;
+          }
+
+          @media screen and (max-width: 480px) {
+            font-size: 0.8rem;
+          }
         }
         input#peoples {
           padding-right: 20px;
@@ -80,21 +157,47 @@ main {
           background-image: url(..//..//images/icon-person.svg);
           background-repeat: no-repeat;
           background-position: left 20px center;
+          /************************************/
+          /*Media*/
+          /***********************************/
+          @media screen and (max-width: 940px) {
+            margin-bottom: 30px;
+          }
         }
       }
       .container-right {
-        @include center;
+        display: flex;
         flex-direction: column;
+        align-items: flex-start;
         color: black;
         padding: 40px;
         background: $Verydarkcyan;
         border-radius: 13px;
-
+        /************************************/
+        /*Media*/
+        /***********************************/
+        @media screen and (max-width: 940px) {
+          padding: 25px;
+          width: 100%;
+          margin: 0 auto;
+        }
         .flex1 {
           display: flex;
           align-items: center;
-          gap: 98px;
+          gap: 120px;
           margin-bottom: 60px;
+
+          /************************************/
+          /*Media*/
+          /***********************************/
+          @media screen and (max-width: 940px) {
+            gap: 145px;
+            margin-bottom: 25px;
+          }
+
+          @media screen and (max-width: 480px) {
+            gap: 60px;
+          }
 
           .amount {
             display: flex;
@@ -102,23 +205,55 @@ main {
 
             h4 {
               color: $White;
+
+              /************************************/
+              /*Media*/
+              /***********************************/
+              @media screen and (max-width: 480px) {
+                font-size: 0.8rem;
+              }
             }
 
             p {
               font-size: 0.9rem;
               color: $Grayishcyan;
+
+              /************************************/
+              /*Media*/
+              /***********************************/
+              @media screen and (max-width: 480px) {
+                font-size: 0.7rem;
+              }
             }
           }
           span#amountTip {
             font-size: 2.5rem;
             color: $Strongcyan;
+
+            /************************************/
+            /*Media*/
+            /***********************************/
+            @media screen and (max-width: 940px) {
+              font-size: 2rem;
+            }
           }
         }
         .flex2 {
           display: flex;
           align-items: center;
-          gap: 125px;
+          gap: 148px;
           margin-bottom: 104px;
+
+          /************************************/
+          /*Media*/
+          /***********************************/
+          @media screen and (max-width: 940px) {
+            gap: 170px;
+            margin-bottom: 25px;
+          }
+          @media screen and (max-width: 480px) {
+            gap: 68px;
+          }
 
           .amountT {
             display: flex;
@@ -126,6 +261,13 @@ main {
 
             h5 {
               color: $White;
+
+              /************************************/
+              /*Media*/
+              /***********************************/
+              @media screen and (max-width: 480px) {
+                font-size: 0.8rem;
+              }
             }
 
             p {
@@ -136,6 +278,13 @@ main {
           span#amountTotal {
             font-size: 2.5rem;
             color: $Strongcyan;
+
+            /************************************/
+            /*Media*/
+            /************************************/
+            @media screen and (max-width: 940px) {
+              font-size: 2rem;
+            }
           }
         }
         button#reset {

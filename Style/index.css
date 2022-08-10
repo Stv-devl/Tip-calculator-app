@@ -24,6 +24,7 @@ body {
   color: hsl(184deg, 14%, 56%);
 }
 
+/*setting title*/
 h1,
 h2,
 h3,
@@ -32,6 +33,7 @@ h5 {
   font-size: 1rem;
 }
 
+/*setting input*/
 input#bill,
 input#custom,
 input#peoples {
@@ -66,14 +68,24 @@ a:visited {
 /**********************************************************************/
 /*Main*/
 /**********************************************************************/
+/*center element in page*/
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  /*Setting card*/
 }
 main img {
   margin-bottom: 88px;
+  /************************************/
+  /*Media*/
+  /***********************************/
+}
+@media screen and (max-width: 940px) {
+  main img {
+    margin-bottom: 40px;
+  }
 }
 main .card {
   width: 920px;
@@ -83,16 +95,48 @@ main .card {
   box-shadow: 0px 15px 10px 0px hsla(249deg, 10%, 26%, 0.1);
   padding: 33px;
   text-align: left;
+  /************************************/
+  /*Media*/
+  /***********************************/
+  /*2 columns*/
+}
+@media screen and (max-width: 940px) {
+  main .card {
+    width: 460px;
+    height: 790px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .card {
+    width: 360px;
+    height: 790px;
+  }
 }
 main .card .grid01 {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 416px;
+  grid-template-rows: 100%;
+  /************************************/
+  /*Media*/
+  /***********************************/
+}
+@media screen and (max-width: 940px) {
+  main .card .grid01 {
+    display: block;
+  }
 }
 main .card .grid01 .container-left {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-left: 10px;
+  padding-right: 40px;
+  /************************************/
+  /*Media*/
+  /***********************************/
+  /*tip buttons*/
+}
+@media screen and (max-width: 940px) {
+  main .card .grid01 .container-left {
+    padding: 0;
+  }
 }
 main .card .grid01 .container-left input#bill {
   padding-right: 20px;
@@ -100,6 +144,14 @@ main .card .grid01 .container-left input#bill {
   background-image: url(..//..//images/icon-dollar.svg);
   background-repeat: no-repeat;
   background-position: left 20px center;
+  /************************************/
+  /*Media*/
+  /***********************************/
+}
+@media screen and (max-width: 940px) {
+  main .card .grid01 .container-left input#bill {
+    margin: 13px 0 30px 0;
+  }
 }
 main .card .grid01 .container-left ul {
   display: grid;
@@ -109,6 +161,20 @@ main .card .grid01 .container-left ul {
        column-gap: 14px;
   row-gap: 16px;
   margin: 20px 0 45px 0;
+  /************************************/
+  /*Media*/
+  /***********************************/
+  /*to interact with javascript*/
+}
+@media screen and (max-width: 940px) {
+  main .card .grid01 .container-left ul {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    -moz-column-gap: 14px;
+         column-gap: 14px;
+    row-gap: 16px;
+    margin: 16px 0 30px 0;
+  }
 }
 main .card .grid01 .container-left ul li {
   display: flex;
@@ -120,10 +186,18 @@ main .card .grid01 .container-left ul li {
   width: 117px;
   height: 48px;
   border-radius: 5px;
+  /************************************/
+  /*Media*/
+  /***********************************/
 }
 main .card .grid01 .container-left ul li:hover {
   color: hsl(183deg, 100%, 15%);
   background: hsl(172deg, 67%, 45%);
+}
+@media screen and (max-width: 940px) {
+  main .card .grid01 .container-left ul li {
+    width: 100%;
+  }
 }
 main .card .grid01 .container-left ul .btnclicked {
   color: hsl(183deg, 100%, 15%);
@@ -134,11 +208,34 @@ main .card .grid01 .container-left ul input#custom {
   align-items: center;
   justify-content: center;
   text-align: center;
+  width: 117px;
+  height: 48px;
+  /************************************/
+  /*Media*/
+  /***********************************/
+}
+@media screen and (max-width: 940px) {
+  main .card .grid01 .container-left ul input#custom {
+    width: 100%;
+  }
 }
 main .card .grid01 .container-left span#choosenumber {
   font-size: 0.9rem;
   margin-left: 80px;
   color: rgb(209, 14, 14);
+  /************************************/
+  /*Media*/
+  /***********************************/
+}
+@media screen and (max-width: 940px) {
+  main .card .grid01 .container-left span#choosenumber {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .card .grid01 .container-left span#choosenumber {
+    font-size: 0.8rem;
+  }
 }
 main .card .grid01 .container-left input#peoples {
   padding-right: 20px;
@@ -146,22 +243,53 @@ main .card .grid01 .container-left input#peoples {
   background-image: url(..//..//images/icon-person.svg);
   background-repeat: no-repeat;
   background-position: left 20px center;
+  /************************************/
+  /*Media*/
+  /***********************************/
+}
+@media screen and (max-width: 940px) {
+  main .card .grid01 .container-left input#peoples {
+    margin-bottom: 30px;
+  }
 }
 main .card .grid01 .container-right {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: flex-start;
   color: black;
   padding: 40px;
   background: hsl(183deg, 100%, 15%);
   border-radius: 13px;
+  /************************************/
+  /*Media*/
+  /***********************************/
+}
+@media screen and (max-width: 940px) {
+  main .card .grid01 .container-right {
+    padding: 25px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 main .card .grid01 .container-right .flex1 {
   display: flex;
   align-items: center;
-  gap: 98px;
+  gap: 120px;
   margin-bottom: 60px;
+  /************************************/
+  /*Media*/
+  /***********************************/
+}
+@media screen and (max-width: 940px) {
+  main .card .grid01 .container-right .flex1 {
+    gap: 145px;
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .card .grid01 .container-right .flex1 {
+    gap: 60px;
+  }
 }
 main .card .grid01 .container-right .flex1 .amount {
   display: flex;
@@ -169,20 +297,58 @@ main .card .grid01 .container-right .flex1 .amount {
 }
 main .card .grid01 .container-right .flex1 .amount h4 {
   color: hsl(0deg, 0%, 100%);
+  /************************************/
+  /*Media*/
+  /***********************************/
+}
+@media screen and (max-width: 480px) {
+  main .card .grid01 .container-right .flex1 .amount h4 {
+    font-size: 0.8rem;
+  }
 }
 main .card .grid01 .container-right .flex1 .amount p {
   font-size: 0.9rem;
   color: hsl(184deg, 14%, 56%);
+  /************************************/
+  /*Media*/
+  /***********************************/
+}
+@media screen and (max-width: 480px) {
+  main .card .grid01 .container-right .flex1 .amount p {
+    font-size: 0.7rem;
+  }
 }
 main .card .grid01 .container-right .flex1 span#amountTip {
   font-size: 2.5rem;
   color: hsl(172deg, 67%, 45%);
+  /************************************/
+  /*Media*/
+  /***********************************/
+}
+@media screen and (max-width: 940px) {
+  main .card .grid01 .container-right .flex1 span#amountTip {
+    font-size: 2rem;
+  }
 }
 main .card .grid01 .container-right .flex2 {
   display: flex;
   align-items: center;
-  gap: 125px;
+  gap: 148px;
   margin-bottom: 104px;
+  /************************************/
+  /*Media*/
+  /***********************************/
+}
+@media screen and (max-width: 940px) {
+  main .card .grid01 .container-right .flex2 {
+    gap: 170px;
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .card .grid01 .container-right .flex2 {
+    gap: 68px;
+  }
 }
 main .card .grid01 .container-right .flex2 .amountT {
   display: flex;
@@ -190,6 +356,14 @@ main .card .grid01 .container-right .flex2 .amountT {
 }
 main .card .grid01 .container-right .flex2 .amountT h5 {
   color: hsl(0deg, 0%, 100%);
+  /************************************/
+  /*Media*/
+  /***********************************/
+}
+@media screen and (max-width: 480px) {
+  main .card .grid01 .container-right .flex2 .amountT h5 {
+    font-size: 0.8rem;
+  }
 }
 main .card .grid01 .container-right .flex2 .amountT p {
   font-size: 0.9rem;
@@ -198,6 +372,14 @@ main .card .grid01 .container-right .flex2 .amountT p {
 main .card .grid01 .container-right .flex2 span#amountTotal {
   font-size: 2.5rem;
   color: hsl(172deg, 67%, 45%);
+  /************************************/
+  /*Media*/
+  /************************************/
+}
+@media screen and (max-width: 940px) {
+  main .card .grid01 .container-right .flex2 span#amountTotal {
+    font-size: 2rem;
+  }
 }
 main .card .grid01 .container-right button#reset {
   background-color: rgb(7, 127, 133);
