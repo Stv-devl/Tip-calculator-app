@@ -153,6 +153,17 @@ main .card .grid01 .container-left input#bill {
     margin: 13px 0 30px 0;
   }
 }
+main .card .grid01 .container-left span#cantbemore {
+  font-size: 0.9rem;
+  margin-left: 55px;
+  color: rgb(209, 14, 14);
+}
+@media screen and (max-width: 480px) {
+  main .card .grid01 .container-left span#cantbemore {
+    margin-left: 18px;
+    font-size: 0.7rem;
+  }
+}
 main .card .grid01 .container-left ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

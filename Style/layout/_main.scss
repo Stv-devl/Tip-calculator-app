@@ -76,6 +76,17 @@ main {
             margin: 13px 0 30px 0;
           }
         }
+
+        span#cantbemore {
+          font-size: 0.9rem;
+          margin-left: 55px;
+          color: rgb(209, 14, 14);
+
+          @media screen and (max-width: 480px) {
+            margin-left: 18px;
+            font-size: 0.7rem;
+          }
+        }
         /*tip buttons*/
         ul {
           display: grid;

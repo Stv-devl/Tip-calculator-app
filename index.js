@@ -58,23 +58,28 @@ custom.addEventListener("click", (e) => {
 
 //custom tip
 custom.addEventListener("change", (e) => {
-  calcTipCustom = e.target.value / 100;
-  calcPeopleCustom = 1 + e.target.value / 100;
-  custom.style.border = "1.5px solid hsl(172, 67%, 45%)";
-  calculate();
+  if (custom.value > 100) {
+    cantbemore.textContent = `Can't be more than 100%`;
+  } else {
+    calcTipCustom = e.target.value / 100;
+    calcPeopleCustom = 1 + e.target.value / 100;
+    custom.style.border = "2px solid hsl(172, 67%, 45%)";
+    cantbemore.textContent = "";
+    calculate();
+  }
 });
 
 //number of people
 peoples.addEventListener("change", (e) => {
   number_people = e.target.value;
-  peoples.style.border = "1.5px solid hsl(172, 67%, 45%)";
+  peoples.style.border = "2px solid hsl(172, 67%, 45%)";
   calculate();
 });
 
 //bill price
 bills.addEventListener("change", (e) => {
   bill = e.target.value;
-  bills.style.border = "1.5px solid hsl(172, 67%, 45%)";
+  bills.style.border = "2px solid hsl(172, 67%, 45%)";
   calculate();
 });
 
@@ -96,4 +101,6 @@ reset.addEventListener("click", (e) => {
   peoples.style.border = "none";
   bills.style.border = "none";
   custom.style.border = "none";
+  cantbemore.textContent = "";
+  choosenumber.textContent = "";
 });
